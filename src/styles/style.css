@@ -1,0 +1,12 @@
+html {
+  /* Colour styles */
+  --background: #e5dcd7;
+  --primary: #000;
+  --secondary: #d22d57;
+  --ticket_popular: #6ece91;
+  --ticket_text: #ffffff;
+  --header: #000;
+
+  /* Font sizes */
+  --header_text: ;
+}
