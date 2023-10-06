@@ -1,5 +1,6 @@
 ---
-
+import "../styles/style.css";
+import Navigation from "../components/Navigation.astro"
 ---
 
 <html lang="da">
@@ -11,27 +12,9 @@
 		<title>Astro</title>
 	</head>
 	<body>
-<section class="navigation">
-	<article>
-	<a href="#">
-		<img src="#" alt="logo">
-	</article>
-	<article>
-		<ul>
-			<li><a href="#">Tickets</a></li>
-			<li><a href="#">Speakers</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Previous Years</a></li>
-		</ul>
-		<div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-	</article>
-</section>
-
-
+<header>
+	<Navigation />
+</header>
 <section class="banner">
 	<article>
 		<h2>UX Copenhagen</h2>
@@ -87,7 +70,6 @@
 </section>
 
 	</body>
-=======
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -98,5 +80,4 @@
   <body>
     <h1>Astro</h1>
   </body>
->>>>>>> c1aead7bffe1f853fdb3747613f50504c88ccfe7
 </html>

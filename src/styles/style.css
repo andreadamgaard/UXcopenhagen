@@ -1,4 +1,4 @@
-html {
+:root {
   /* Colour styles */
   --background: #e5dcd7;
   --primary: #000;
@@ -8,5 +8,45 @@ html {
   --header: #000;
 
   /* Font sizes */
-  --header_text: ;
+  --header_text: 8rem;
+}
+
+@font-face {
+  font-family: "akira_expandedsuper_bold";
+  src: url("/fonts/akira_expanded_demo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: akira_expandedsuper_bold;
+}
+
+a,
+li,
+ul {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+a {
+  color: var(--background);
+  transition: color 0.2s;
 }
