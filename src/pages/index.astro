@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import Navigation from "../components/Navigation.astro"
+import Banner from "../components/Banner.astro"
 ---
 
 <html lang="da">
@@ -15,13 +16,8 @@ import Navigation from "../components/Navigation.astro"
 <header>
 	<Navigation />
 </header>
-<section class="banner">
-	<article>
-		<h2>UX Copenhagen</h2>
-		<h3>20-21 March</h3>
-	</article>
-</section>
-
+<main>
+<Banner />
 <section>
 	<button>Buy tickets</button>
 </section>
@@ -68,16 +64,6 @@ import Navigation from "../components/Navigation.astro"
 		</figure>
 	</article>
 </section>
-
-	</body>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
+</main>
+</body>
 </html>
