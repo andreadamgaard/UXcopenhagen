@@ -1,0 +1,9 @@
+---
+const {data} = Astro.props
+---
+<article>
+				<img src={`/images/speakers/${data.image}`} alt="">
+				<h3>{data.name}</h3>
+				<h4>Position</h4>
+				<h5>Firma</h5>
+			</article>
