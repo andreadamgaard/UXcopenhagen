@@ -2,17 +2,31 @@
 const {data} = Astro.props
 ---
 <article>
-				<img src={`/images/speakers/${data.image}`} alt="">
-				<h3>{data.name}</h3>
-				<h4>{data.position}</h4>
-				<p>{data.company}</p>
-			</article>
+	<img src={`/images/speakers/${data.image}`} alt="Speaker">
+    <div>
+	<h3>{data.name}</h3>
+	<p class="position">{data.position}</p>
+	<p>{data.company}</p>
+    </div>
+</article>
 
 
 <style>
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
     img{
-        width: auto;
-        height: 300px;
+        width: 60%;
+        height: auto;
         border-radius: 48%;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .position {
+        font-size: 1.2rem;
     }
 </style>

@@ -37,6 +37,10 @@ a {
   font-family: akira_expandedsuper_bold;
 }
 
+p {
+  font-family: "Lato", sans-serif;
+}
+
 a,
 li,
 ul {

@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Navigation from "../components/Navigation.astro";
 import Speaker from "../components/Speaker.astro";
+import Speakersheader from "../components/Speakersheader.astro";
 /*
 curl 'https://guxntefulwidsldenixo.supabase.co/rest/v1/speakers_ux_cph?select=id' \
 -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1eG50ZWZ1bHdpZHNsZGVuaXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY1ODQ3MDEsImV4cCI6MjAxMjE2MDcwMX0.1SvzDoE_3eLOMgQNAxNtYIdiE6wCaZIzPeJSjTSfmYQ" \
@@ -22,6 +23,9 @@ console.log(data)
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
@@ -29,19 +33,21 @@ console.log(data)
 <header>
 	<Navigation />
 </header>
-		<section>
-			<header>
-				<h1>UX Copenhagen Speakers</h1>
-				<h2>2024</h2>
-			</header>
-		</section>
+<body>
+<Speakersheader />
 		<section class="listeview">
 			  {
         data.map((thing) => {
           return <Speaker data={thing} />;
         })
       }
-			
 		</section>
 	</body>
 </html>
+
+<style>
+	.listeview{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+</style>
