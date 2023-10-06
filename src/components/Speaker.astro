@@ -4,6 +4,15 @@ const {data} = Astro.props
 <article>
 				<img src={`/images/speakers/${data.image}`} alt="">
 				<h3>{data.name}</h3>
-				<h4>Position</h4>
-				<h5>Firma</h5>
+				<h4>{data.position}</h4>
+				<p>{data.company}</p>
 			</article>
+
+
+<style>
+    img{
+        width: auto;
+        height: 300px;
+        border-radius: 48%;
+    }
+</style>
