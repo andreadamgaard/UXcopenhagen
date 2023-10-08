@@ -1,4 +1,25 @@
 ---
+import "../styles/style.css";
+import Navigation from "../components/Navigation.astro";
+
+export async function getStaticPaths() {
+	const url = "https://guxntefulwidsldenixo.supabase.co/rest/v1/speakers_ux_cph";
+
+	const options= {
+		headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1eG50ZWZ1bHdpZHNsZGVuaXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY1ODQ3MDEsImV4cCI6MjAxMjE2MDcwMX0.1SvzDoE_3eLOMgQNAxNtYIdiE6wCaZIzPeJSjTSfmYQ"}
+};
+
+const data = await fetch(url, options).then(response => response.json());
+
+return data.map((ret) => {
+	return {
+		params: { slug: ret.slug},
+		props: { ret },
+	};
+});
+}
+const { ret } = Astro.props
 ---
 
 <html lang="da">
