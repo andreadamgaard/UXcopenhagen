@@ -4,7 +4,7 @@ const {data} = Astro.props
 <article>
 	<img src={`/images/speakers/${data.image}`} alt="Speaker">
     <div>
-    <a href=`speaker/${data.slug}`>
+    <a href={`/speaker/${data.slug}`}>
 	<h3>{data.name}</h3>
 	<p class="position">{data.position}</p>
 	<p class="company">{data.company}</p>
@@ -33,5 +33,8 @@ const {data} = Astro.props
     }
     .company{
     font-style: italic;
+    }
+    a{
+        color: black;
     }
 </style>

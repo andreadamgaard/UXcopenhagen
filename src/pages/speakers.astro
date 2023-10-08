@@ -1,13 +1,8 @@
 ---
-import "../styles/style.css";
-import Navigation from "../components/Navigation.astro";
 import Speaker from "../components/Speaker.astro";
 import Speakersheader from "../components/Speakersheader.astro";
-/*
-curl 'https://guxntefulwidsldenixo.supabase.co/rest/v1/speakers_ux_cph?select=id' \
--H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1eG50ZWZ1bHdpZHNsZGVuaXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY1ODQ3MDEsImV4cCI6MjAxMjE2MDcwMX0.1SvzDoE_3eLOMgQNAxNtYIdiE6wCaZIzPeJSjTSfmYQ" \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1eG50ZWZ1bHdpZHNsZGVuaXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY1ODQ3MDEsImV4cCI6MjAxMjE2MDcwMX0.1SvzDoE_3eLOMgQNAxNtYIdiE6wCaZIzPeJSjTSfmYQ"x	
-*/
+import MainLayout from "../layouts/MainLayout.astro"
+
 const data = await fetch("https://guxntefulwidsldenixo.supabase.co/rest/v1/speakers_ux_cph", {
 	method:"GET",
 	headers: {
@@ -18,22 +13,7 @@ const data = await fetch("https://guxntefulwidsldenixo.supabase.co/rest/v1/speak
 console.log(data)
 ---
 
-<html lang="da">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-<header>
-	<Navigation />
-</header>
-<body>
+<MainLayout>
 <Speakersheader />
 		<section class="listeview">
 			  {
@@ -41,9 +21,7 @@ console.log(data)
           return <Speaker data={thing} />;
         })
       }
-		</section>
-	</body>
-</html>
+</MainLayout>
 
 <style>
 	.listeview{
