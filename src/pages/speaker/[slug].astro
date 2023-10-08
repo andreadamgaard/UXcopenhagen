@@ -22,10 +22,15 @@ console.log(myData);
 ---
 <MainLayout>
 <div class="grid_2">
-  <div>
-  <img src={`/images/speakers/${myData.image}`} alt="Speaker">
+  <div class="picture">
+  <img class="img" src={`/images/speakers/${myData.image}`} alt="Speaker">
+  <div class="socials">
+  <img src="/logo/facebook.svg" alt="Facebook">
+  <img src="/logo/instagram.svg" alt="Facebook">
+  <img src="/logo/youtube.svg" alt="Facebook">
   </div>
-  <div>
+  </div>
+  <div class="text">
     <h1>{myData.name}</h1>
     <h2>{myData.position}</h2>
     <h3>{myData.company}</h3>
@@ -37,22 +42,73 @@ console.log(myData);
 
 
 <style>
-
 .grid_2{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 900px) {
+.grid_2{
+  display: grid;
   grid-template-columns: 1fr 1fr;
 }
-img{
-  width: 80%;
+
+.picture{
+  margin: 4% 0% 0% 6%;
+}
+.img{
+  max-width: 600px;  
   height: auto;
   border-radius: 48%;
-  padding: 2rem;
 }
-
+.socials{
+  text-align: center;
+}
+.socials img{
+  max-width: 90px;
+  height: auto;
+  margin-top: 3%;
+  margin-right: 5%;
+  }
+.socials img:nth-child(3) {
+  margin-right: 0;
+  }
+.text{
+  margin: 0% 0% 0% 6%;
+  max-width: 800px;
+}
 h1{
+font-size: 8.9cqw;
+line-height: 100%;
+color: var(--secondary);
+margin: 0% 0% 0% -26%;
+}
+h2{
 position: relative;
-font-size: 7cqw;
-line-height: 100px;
+font-size: 5cqw;
+max-width: 600px;
+margin-top: -7%;
+margin-bottom: 1%;
+line-height: 100%;
 z-index: 1;
 }
+h3{
+position: relative;
+font-size: 3.5cqw;
+margin-top: 0%;
+z-index: 1;
+max-width: 600px;
+line-height: 100%;
+}
+
+h4{
+  font-size: 2cqw;
+}
+
+p{
+  max-width: 700px;
+  line-height: 1.7;
+  font-size: 1.3cqw;
+
+}}
 </style>
