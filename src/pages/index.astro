@@ -2,20 +2,10 @@
 import "../styles/style.css";
 import Navigation from "../components/Navigation.astro"
 import Banner from "../components/Banner.astro"
+import MainLayout from "../layouts/MainLayout.astro"
 ---
 
-<html lang="da">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-<header>
-	<Navigation />
-</header>
+<MainLayout>
 <main>
 <Banner />
 <section>
@@ -64,6 +54,4 @@ import Banner from "../components/Banner.astro"
 		</figure>
 	</article>
 </section>
-</main>
-</body>
-</html>
+</MainLayout>
