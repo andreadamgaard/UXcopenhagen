@@ -22,13 +22,15 @@ console.log(myData);
 ---
 <MainLayout>
 <div class="grid_2">
-  <div class="picture">
-  <img class="img" src={`/images/speakers/${myData.image}`} alt="Speaker">
-  <div class="socials">
-  <img src="/logo/facebook.svg" alt="Facebook">
-  <img src="/logo/instagram.svg" alt="Facebook">
-  <img src="/logo/youtube.svg" alt="Facebook">
-  </div>
+  <div>
+    <div class="picture">
+      <img class="img" src={`/images/speakers/${myData.image}`} alt="Speaker">
+      <div class="socials">
+        <img src="/logo/facebook.svg" alt="Facebook">
+        <img src="/logo/instagram.svg" alt="Facebook">
+        <img src="/logo/youtube.svg" alt="Facebook">
+      </div>
+    </div>
   </div>
   <div class="text">
     <h1>{myData.name}</h1>
@@ -50,8 +52,54 @@ console.log(myData);
 }
 
 img{
-  max-width: 100%;
+  max-width: 80%;
+  border-radius: 48%;
 }
+
+.img{
+    margin: 4% 4% 0% 4%;
+}
+.picture{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1% 1% 1% 1% ;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+    gap: 3%;
+}
+.socials img{
+  width: 50px;
+  border-radius: 0%;
+}
+
+.text{
+  padding: 4%;
+}
+h1{
+font-size: 8.9cqw;
+color: var(--secondary);
+}
+h2{
+font-size: 5cqw;
+
+}
+h3{
+font-size: 3.5cqw;
+margin-top: 0%;
+
+}
+h4{
+  font-size: 2.8cqw;
+}
+p{
+  padding-bottom: 10%;
+}
+
 @media (min-width: 900px) {
 .grid_2{
   display: flex;
@@ -59,21 +107,21 @@ img{
 }
 
 .picture{
-  margin: 4% 4% 10% 4%;
+  margin: 4% 4% 0% 4%;
 }
 .img{
-  max-width: 650px;  
+  max-width: 600px;  
   height: auto;
-  border-radius: 48%;
 }
 .socials{
-  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 .socials img{
-  max-width: 90px;
+  width: 80px;
   height: auto;
   margin-top: 3%;
-  margin-right: 5%;
+  margin-right: 8%;
   }
 .socials img:nth-child(3) {
   margin-right: 0;
@@ -82,16 +130,16 @@ img{
   display: flex;
   flex-direction: column;
   margin-top: 3%;
+  padding: 0% 0% 0% 5%;
+
 }
 h1{
-font-size: 8.9cqw;
 line-height: 100%;
 color: var(--secondary);
 translate: -23% 18%;
 }
 h2{
 position: relative;
-font-size: 5cqw;
 max-width: 600px;
 margin-bottom: 1%;
 line-height: 100%;
@@ -99,20 +147,15 @@ z-index: 1;
 }
 h3{
 position: relative;
-font-size: 3.5cqw;
 margin-top: 0%;
 z-index: 1;
 max-width: 600px;
 line-height: 100%;
 }
-h4{
-  font-size: 2cqw;
-}
 p{
   max-width: 580px;
   line-height: 1.7;
   font-size: 1.3cqw;
-
 }
 }
 </style>
