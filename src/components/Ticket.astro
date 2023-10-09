@@ -1,3 +1,54 @@
 ---
 
 ---
+<section>
+ <div class="card">
+        <div class="bg"></div>
+        <div class="content">
+            <h1>ANIMATED GRADIENT asd asd a ad asd BORDER</h1>
+            <h2>ANIMATED GRADIENT BORDER</h2>
+            <h3>ANIMATED GRADIENT BORDER</h3>
+            <p></p>
+        </div>
+    </div>
+    </section>
+
+
+    <style>
+    .card {
+        width: 300px;
+        position: relative;
+        background: #2E3C69;
+        border-radius: 20px;
+    }
+
+
+    .bg {
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -3px;
+        height: calc(100% + 6px);
+        width: calc(100% + 6px);
+        z-index: -1;
+        background: linear-gradient(90deg, #2E3C69, #2E3C69, #D22D57, #D22D57);
+        animation: anim 8s linear infinite;
+        border-radius: 4px;
+        background-size: 400%;
+    }
+
+    .content {
+        background: #F9EFE9;
+        /* padding: 1rem; */
+        height: 400px;
+    }
+
+    @keyframes anim {
+        from {
+            background-position: 0
+        }
+
+        to {
+            background-position: 400%
+        }
+    }
+</style>
