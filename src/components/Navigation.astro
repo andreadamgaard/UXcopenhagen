@@ -1,101 +1,72 @@
 ---
 
 ---
-<header>
-<div class="logo">
-	<a href="/">
-		<img src="/logo/logo_ux.svg" alt="logo">
-    </a>
-    </div>
-	<div>
-  <nav class="navigation">
-		<ul class="menu">
+ <header>
+        <div class="logo">
+            <a href="/">
+                <img src="/logo/logo_ux.svg" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
 			<li><a href="#">Tickets</a></li>
 			<li><a href="/speakers">Speakers</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Previous Years</a></li>
-		</ul>
-		<div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-    </div>
-  </nav>
-</div>
-</header>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
 
 <style>
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--header);
+}
 
-@media (max-width: 900px) {
-  .menu {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-
-  /*rotere top streg, i aktiv burger menu*/
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  /*skjuler midter streg, i aktiv burger menu*/
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-  }
-
-  /*rotere bund streg, i aktiv burger menu*/
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  nav.active .menu {
-    display: block;
-    background-color: var(--header);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-  }
-
-  nav.active .menu li {
-    margin: 10px 20px;
-  }
-
-  nav.active .menu a {
-    font-size: 24px;
-  }
-  .logo img {
+.logo img {
+    width: 70px;
     height: 70px;
-  }
-} 
-header{
-    background-color: var(--header);
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
 }
 
-nav{
-
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.menu{ 
-    padding-top: 1.5rem;
-    padding-right: 2rem;
+.menu li {
+  margin-right: 20px;
 }
 
-ul {
-    margin-bottom: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    align-items: center;
+.menu li:last-child {
+  margin-right: 0;
 }
 
-li {
-    display: flex;
+.menu a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: var(--ticket_text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--secondary);
 }
 
 .burger {
@@ -114,20 +85,65 @@ li {
   display: none;
 }
 
-.logo{
-    padding-left: 1rem;
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: var(--header);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+nav{
+  margin-right: 5%;
 }
 
-.logo img {
-    width: 70px;
-    height: 70px;
-}
-
-a{
-    font-size: 1.2rem;
-}
-
-a:hover {
-  color: var(--secondary);
 }
 </style>
+
+<script>
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li a");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+</script>
