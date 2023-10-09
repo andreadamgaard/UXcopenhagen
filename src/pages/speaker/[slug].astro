@@ -45,16 +45,21 @@ console.log(myData);
 .grid_2{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+img{
+  max-width: 100%;
 }
 @media (min-width: 900px) {
 .grid_2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: row;
 }
 
 .picture{
-  margin: 4% 0% 0% 6%;
+  margin: 4% 4% 0% 4%;
 }
 .img{
   max-width: 600px;  
@@ -74,14 +79,17 @@ console.log(myData);
   margin-right: 0;
   }
 .text{
-  margin: 0% 0% 0% 6%;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  /* margin: 0% 0% 0% 6%; */
+  max-height: 2000px;
 }
 h1{
 font-size: 8.9cqw;
 line-height: 100%;
 color: var(--secondary);
-margin: 0% 0% 0% -26%;
+translate: -20% 0%;
+/* margin: 0% 0% 0% -26%; */
 }
 h2{
 position: relative;
@@ -106,7 +114,7 @@ h4{
 }
 
 p{
-  max-width: 700px;
+  max-width: 580px;
   line-height: 1.7;
   font-size: 1.3cqw;
 
