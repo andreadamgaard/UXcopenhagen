@@ -1,0 +1,46 @@
+---
+const {data} = Astro.props
+---
+<article>
+    <a href={`/speaker/${data.slug}`}>
+	<img src={`/images/speakers/${data.image}`} alt="Speaker">
+    <div>
+	<h3>{data.name}</h3>
+	<p class="position">{data.position}</p>
+	<p class="company">{data.company}</p>
+    </a>
+    </div>
+</article>
+
+
+<style>
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    img{
+        width: 60%;
+        height: auto;
+        border-radius: 48%;
+        padding-bottom: 2%;
+
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .position {
+        font-size: 1.2rem;
+    }
+    .company{
+    font-style: italic;
+    }
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3%;
+        color: black;
+    }
+</style>

@@ -14,3 +14,37 @@
 		
 	</body>
 </html>
+
+import Speaker from "../components/Speaker.astro";
+import Speakersheader from "../components/Speakersheader.astro";
+import MainLayout from "../layouts/MainLayout.astro"
+
+const data = await fetch("https://guxntefulwidsldenixo.supabase.co/rest/v1/speakers_ux_cph", {
+	method:"GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1eG50ZWZ1bHdpZHNsZGVuaXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY1ODQ3MDEsImV4cCI6MjAxMjE2MDcwMX0.1SvzDoE_3eLOMgQNAxNtYIdiE6wCaZIzPeJSjTSfmYQ"
+	}
+}).then(res=>res.json())
+
+console.log(data)
+---
+
+<MainLayout>
+<Speakersheader />
+		<section class="listeview">
+			  {
+        data.map((thing) => {
+          return <Speaker data={thing} />;
+        })
+      }
+</MainLayout>
+
+<style>
+
+	@media (min-width: 900px){
+	.listeview{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	}
+</style>
