@@ -17,8 +17,8 @@
             <p>21. March 2024</p>
         </div>
         <div>
-            <h3>UX COPENHAGEN</h3>
             <div class="socials">
+                <h3>UX COPENHAGEN</h3>
                 <h3>SOCIAL</h3>
                 <a href="https://www.instagram.com/UXCopenhagen/"><svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M49.5 58.1625C44.8594 58.1625 40.8375 54.45 40.8375 49.5C40.8375 44.8594 44.55 40.8375 49.5 40.8375C54.1406 40.8375 58.1625 44.55 58.1625 49.5C58.1625 54.1406 54.1406 58.1625 49.5 58.1625Z" fill="white"/>
@@ -52,7 +52,7 @@ footer {
 
 .contentfooter h3 {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.4cqw;
 }
 
 .contentfooter p {
@@ -65,6 +65,15 @@ footer img {
   width: 30px;
 }
 
+p {
+    font-size: 1.3cqw;
+}
+
+.socials h3 {
+    font-size: 1.4cqw;
+    padding-bottom: 5%;
+}
+
 .socials svg {
     width: 40px;
     height: 40px;
@@ -73,4 +82,18 @@ footer img {
 .socials a{
     padding-right: 5%;
 }
+
+@media (max-width: 900px){
+footer{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.socials svg {
+    width: 20px;
+    height: 20px;
+}
+
+}
   </style>
+  
