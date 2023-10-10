@@ -1,33 +1,97 @@
 ---
 
 ---
-
-<section class="banner">
-	<article>
-        <img src="/photos/ux_banner.webp" alt="">
-        <div class="grid_2">
-            <div>
-		        <h2>UX Copenhagen</h2>
-		        <h3>20-21 March</h3>
-            </div>
-            <div>
-                <h1>Degrowth & consumerism</h1>
-                <h2>2024</h2>
-                <h3>Hamborg Plads 6, nordhavn</h3>
-            </div>
+<section>
+    <div class="banner">
+        <div class="top_text">
+          <h1>20-21 <br> March</h1>
+          <h2>UX Copenhagen</h2>
         </div>
-	</article>
+        <div class="bund_text">
+          <h1>Degrowth & <br> consumerism</h1>
+          <h2>Hamborg Plads 6, <br> nordhavn</h2>
+          <h3>2024</h3>
+        </div>
+        <img src="/photos/ux_banner1.webp" alt="banner kontakt" />
+    </div>
 </section>
 
-
 <style>
-img{
-        object-fit: cover;
-        width: 100%;
-        height: auto;
- }
-.grid_2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+section{
+    margin-top: -3px;
 }
+  img {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .banner img:last-child {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .banner {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .banner div:nth-child(1) {
+    color: var(--background);
+    font-size: 3cqw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 10;
+    display: flex;
+    place-items: start;
+  }
+  .banner div:nth-child(1) h1 {
+    font-size: 3cqw;
+    translate: -135% -180%;
+  }
+  .banner div:nth-child(1) h2 {
+    font-size: 3cqw;
+    translate: 60% -355%;
+  }
+
+  .banner div:nth-child(2) {
+    color: var(--background);
+    font-size: 3cqw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+  }
+
+  .banner div:nth-child(2) h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 5.6cqw;
+    translate: -5% 180%;
+    letter-spacing: 35px;
+    line-height: 88px;
+  }
+
+  .banner div:nth-child(2) h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5cqw;
+    translate: 250% 450%;
+    text-align: end;
+  }
+
+  .banner div:nth-child(2) h3 {
+    position: relative;
+    font-size: 18cqw;
+    translate: -5% 23%;
+    letter-spacing: 78px;
+    color: var(--secondary);
+  }
 </style>
