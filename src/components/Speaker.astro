@@ -2,9 +2,9 @@
 const {data} = Astro.props
 ---
 <article>
+    <a href={`/speaker/${data.slug}`}>
 	<img src={`/images/speakers/${data.image}`} alt="Speaker">
     <div>
-    <a href={`/speaker/${data.slug}`}>
 	<h3>{data.name}</h3>
 	<p class="position">{data.position}</p>
 	<p class="company">{data.company}</p>
@@ -24,6 +24,8 @@ const {data} = Astro.props
         width: 60%;
         height: auto;
         border-radius: 48%;
+        padding-bottom: 2%;
+
     }
     h3 {
         font-size: 1.8rem;
@@ -35,6 +37,10 @@ const {data} = Astro.props
     font-style: italic;
     }
     a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3%;
         color: black;
     }
 </style>

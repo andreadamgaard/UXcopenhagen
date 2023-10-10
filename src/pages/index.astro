@@ -3,6 +3,8 @@ import "../styles/style.css";
 import Navigation from "../components/Navigation.astro"
 import Banner from "../components/Banner.astro"
 import MainLayout from "../layouts/MainLayout.astro"
+import Ticket from "../components/Ticket.astro"
+import Popular from "../components/Popular.astro"
 import Button from "../components/Button.astro"
 ---
 
@@ -59,4 +61,15 @@ import Button from "../components/Button.astro"
 		</figure>
 	</article>
 </section>
+
+<div class="flexbox">
+
+<Ticket h2="ON-SITE TICKET"/>
+
+<Ticket h2="ONLINE TICKET">
+	<Popular />
+</Ticket>
+
+<Ticket h2="GROUP TICKET" />
+</div>
 </MainLayout>

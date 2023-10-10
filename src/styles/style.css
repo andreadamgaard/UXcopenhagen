@@ -16,6 +16,7 @@
   src: url("/fonts/akira_expanded_demo-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 * {
   margin: 0;
@@ -53,4 +54,9 @@ li {
 a {
   color: var(--background);
   transition: color 0.2s;
+}
+.flexbox {
+  display: flex;
+  gap: 8%;
+  margin-left: 15%;
 }
