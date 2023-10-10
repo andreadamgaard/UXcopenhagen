@@ -21,6 +21,7 @@ const {myData} = Astro.props;
 console.log(myData);
 ---
 <MainLayout>
+<section>
 <div class="grid_2">
   <div>
     <div class="picture">
@@ -42,6 +43,11 @@ console.log(myData);
     </div>
   </div>
 </div>
+<article>
+  <img class="left" src="/logo/arrow_l.png" alt="arrow left">
+  <img src="/logo/arrow_r.png" alt="arrow right">
+</article>
+</section>
 </MainLayout>
 
 
@@ -51,6 +57,20 @@ console.log(myData);
   flex-direction: column;
 }
 
+article{
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+article img {
+  height: 50px;
+  width: auto;
+}
+.left{
+  transform: rotate(180deg);
+}
 img{
   max-width: 80%;
   height: auto;
@@ -107,8 +127,12 @@ p{
   flex-direction: row;
 }
 
+article img {
+  height: 90px;
+  width: auto;
+}
 .picture{
-  margin: 4% 4% 0% 4%;
+  margin: 4% 0% 4% 10%;
 }
 .img{
   max-width: 600px;  
