@@ -5,26 +5,23 @@ import Banner from "../components/Banner.astro"
 import MainLayout from "../layouts/MainLayout.astro"
 import Ticket from "../components/Ticket.astro"
 import Popular from "../components/Popular.astro"
+import Button from "../components/Button.astro"
+import Whatis from "../components/Whatis.astro"
 
 ---
 
 <MainLayout>
 <main>
 <Banner />
+
+<Button variant="primary" size="medium">BUY TICKETS</Button>
+<Button variant="speakers" size="medium">EXPLORE SPEAKERS</Button>
+<Button variant="secondary" size="medium">BUY TICKETS</Button>
 <section>
-	<button>Buy tickets</button>
+
 </section>
 
-<section class="whatis">
-	<h2>
-		WHAT IS UX COPENHAGEN?
-	</h2>
-	<p>
-		UX Copenhagen is Denmarks most inspirational human experience conference!
-	</p>
-	<p>The theme for UX Copenhagen 2024 is “Degrowth & Consumerism”. </p>
-	<p>For far too long, we have been living in a world that applauds and encourages continuous growth, expansion, selling, and manipulation. It’s a world of over.</p>
-</section>
+<Whatis/>
 
 <section class="speakers">
 	<h2>
@@ -36,27 +33,7 @@ import Popular from "../components/Popular.astro"
 	</figure>
 </section>
 
-<section class="tickets">
-	<h2>
-		Tickets for 2024
-	</h2>
-	<article>
-		<h3>
-			20-21 marts 2024
-		</h3>
-		<h4>
-			Online ticket
-		</h4>
-		<figure>
-			<img src="#" alt="">
-			<h5>Copenhagen</h5>
-		</figure>
-		<button>Buy tickets</button>
-		<figure class="ticket_banner">
-		<h6>Poplular</h6>
-		</figure>
-	</article>
-</section>
+
 
 <div class="flexbox">
 
