@@ -12,7 +12,9 @@ const h2 = Astro.props.h2;
             <h2>{h2}</h2>
             <img src="/location.png" alt="Location">
             <h3>COPENHAGEN</h3>
+            <div class="button">
             <Button variant="secondary" size="medium">BUY TICKETS</Button>
+            </div>
         </div>
     </div>
     </section>
@@ -64,6 +66,10 @@ const h2 = Astro.props.h2;
         margin-top: 10%;
     }
 
+    .button{
+        display: flex;
+        justify-content: center;
+    }
     @keyframes anim {
         from {
             background-position: 0
