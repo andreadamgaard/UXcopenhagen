@@ -3,13 +3,18 @@ import "../styles/style.css";
 import Navigation from "../components/Navigation.astro"
 import Banner from "../components/Banner.astro"
 import MainLayout from "../layouts/MainLayout.astro"
+import Button from "../components/Button.astro"
 ---
 
 <MainLayout>
 <main>
 <Banner />
+
+<Button variant="primary" size="medium">BUY TICKETS</Button>
+<Button variant="speakers" size="medium">EXPLORE SPEAKERS</Button>
+<Button variant="secondary" size="medium">BUY TICKETS</Button>
 <section>
-	<button>Buy tickets</button>
+
 </section>
 
 <section class="whatis">
