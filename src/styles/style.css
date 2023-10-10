@@ -55,3 +55,8 @@ a {
   color: var(--background);
   transition: color 0.2s;
 }
+.flexbox {
+  display: flex;
+  gap: 8%;
+  margin-left: 15%;
+}
