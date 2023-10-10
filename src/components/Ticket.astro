@@ -1,5 +1,5 @@
 ---
-import Popular from "./Popular.astro";
+import Button from "../components/Button.astro"
 const h2 = Astro.props.h2;
 ---
 <section>
@@ -12,7 +12,7 @@ const h2 = Astro.props.h2;
             <h2>{h2}</h2>
             <img src="/location.png" alt="Location">
             <h3>COPENHAGEN</h3>
-            <p></p>
+            <Button variant="secondary" size="medium">BUY TICKETS</Button>
         </div>
     </div>
     </section>
