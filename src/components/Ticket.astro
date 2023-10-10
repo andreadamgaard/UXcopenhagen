@@ -1,11 +1,13 @@
 ---
-
+import Popular from "./Popular.astro";
 ---
 <section>
  <div class="card">
-        <div class="bg"></div>
-        <div class="content">
+     <div class="bg"></div>
+     <div class="content">
+           
             <h1>20-21 <br> MARCH <br> 2024</h1>
+             <Popular/>
             <h2>ONLINE TICKET</h2>
             <img src="public/location.png" alt="">
             <h3>COPENHAGEN</h3>
@@ -23,8 +25,8 @@
         border-radius: 20px;
         margin: 5%;
     }
-
-
+    
+    
     .bg {
         position: absolute;
         margin-top: -3px;
@@ -37,8 +39,9 @@
         border-radius: 25px;
         background-size: 400%;
     }
-
+    
     .content {
+        overflow: hidden;
         background: #F9EFE9;
         padding: 1rem;
         height: 450px;
