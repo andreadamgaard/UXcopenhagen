@@ -57,7 +57,15 @@ import Popular from "../components/Popular.astro"
 		</figure>
 	</article>
 </section>
-<Ticket/>
-<Ticket>
+
+<div class="flexbox">
+
+<Ticket h2="ON-SITE TICKET"/>
+
+<Ticket h2="ONLINE TICKET">
+	<Popular />
 </Ticket>
+
+<Ticket h2="GROUP TICKET" />
+</div>
 </MainLayout>
