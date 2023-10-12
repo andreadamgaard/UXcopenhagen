@@ -1,5 +1,5 @@
 ---
-
+const { variant = "primary"} = Astro.props;
 ---
  <header>
         <div class="logo">
@@ -10,7 +10,7 @@
         <nav>
             <ul class="menu">
 			<li><a href="#">Tickets</a></li>
-			<li><a href="/speakers">Speakers</a></li>
+			<li><a data-variant={variant} href="/speakers">Speakers</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Previous Years</a></li>
             </ul>
@@ -31,7 +31,6 @@ header {
   width: 100%;
   background-color: var(--header);
 }
-
 .logo img {
     width: 70px;
     height: 70px;
@@ -66,6 +65,10 @@ nav {
 }
 
 .menu a:hover {
+  color: var(--secondary);
+}
+
+[data-variant="primary"] {
   color: var(--secondary);
 }
 
