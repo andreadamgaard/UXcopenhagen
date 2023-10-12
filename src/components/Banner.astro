@@ -1,24 +1,86 @@
 ---
 
 ---
-<section>
-    <div class="banner">
+    <section>
         <div class="top_text">
-          <h1>20-21 <br> March</h1>
+          <h1>
+            20-21 <br />
+            March
+          </h1>
           <h2>UX Copenhagen</h2>
         </div>
         <div class="bund_text">
-          <h1>Degrowth & <br> consumerism</h1>
-          <h2>Hamborg Plads 6, <br> nordhavn</h2>
+          <h1>
+            Degrowth & <br />
+            consumerism
+          </h1>
+          <h2>
+            Hamborg Plads 6, <br />
+            nordhavn
+          </h2>
           <h3>2024</h3>
         </div>
-        <img src="/photos/ux_banner2.webp" alt="banner kontakt" />
-    </div>
-</section>
+    </section>
 
 <style>
 
-section{
+ section {
+    background-image: url(/photos/ux_banner2.webp);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .top_text {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 150px 20px;  
+    font-size: 2cqw;
+    color: var(--background);
+  }
+
+  .bund_text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+  }
+
+  .bund_text h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 5.6cqw;
+    letter-spacing: 35px;
+    line-height: 80px;
+    padding-left: 2%;
+    color: var(--background);
+
+  }
+
+    .bund_text h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5cqw;
+    text-align: end;
+    color: var(--background);
+    padding-right: 20%;
+
+  }
+
+    .bund_text h3 {
+    position: relative;
+    font-size: 18cqw;
+    letter-spacing: 78px;
+    color: var(--secondary);
+    padding-left: 2%;
+    line-height: 0px;
+  }
+
+/* section{
     margin-top: -3px;
 }
   img {
@@ -95,5 +157,5 @@ section{
     translate: -5% 23%;
     letter-spacing: 78px;
     color: var(--secondary);
-  }
+  } */
 </style>
